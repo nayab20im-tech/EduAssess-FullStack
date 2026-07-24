@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --sb-bg: #0b0f19;
+  --sb-active: #4f46e5;
+  --sb-hover: rgba(79, 70, 229, 0.12);
+  --app-bg: #f6f8fc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--app-bg);
+  color: var(--text-main);
+  margin: 0;
+}
+
+.sidebar-container {
+  min-height: 100vh;
+  background: var(--sb-bg);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-link:hover {
+  background: var(--sb-hover);
+  color: #fff;
+}
+
+.sidebar-link.active {
+  background: var(--sb-active);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.luxury-card {
+  background: var(--card-bg);
+  border: none !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08) !important;
+}
+
+.btn-primary-grad {
+  background: var(--accent-gradient);
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.6rem 1.5rem;
+}
+
+.quiz-option-box {
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quiz-option-box:hover {
+  border-color: #4f46e5;
+  background-color: rgba(79, 70, 229, 0.02);
+}
+
+.nav-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.matrix-btn {
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+}
+
+.podium-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.podium-col {
+  text-align: center;
+  width: 120px;
+}
+
+.podium-bar {
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  color: white;
+  font-weight: 700;
+}
+/* Premium Accent Tokens & Background Gradients */
+.bg-gradient-hero {
+  background: radial-gradient(120% 120% at 50% 10%, #ffffff 40%, #eef2ff 100%);
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard fallback property */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Feature & Stat Cards */
+.stat-card-premium {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card-premium:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1);
+  border-color: rgba(79, 70, 229, 0.3) !important;
+}
+
+.feature-pill {
+  background: rgba(79, 70, 229, 0.06);
+  color: #4f46e5;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Authentication Container */
+.auth-nav-tabs .nav-link {
+  border: none !important;
+  color: #64748b;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.auth-nav-tabs .nav-link.active {
+  color: #4f46e5 !important;
+  border-bottom: 3px solid #4f46e5 !important;
+  background: transparent !important;
+}
+/* Smooth Entry Keyframe Animation */
+@keyframes eliteFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Class to trigger entry animation smoothly */
+.animate-entrance {
+  animation: eliteFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered Delay Tokens for Card Sequencing */
+.delay-node-1 { animation-delay: 0.1s; }
+.delay-node-2 { animation-delay: 0.2s; }
+.delay-node-3 { animation-delay: 0.3s; }
+.delay-node-4 { animation-delay: 0.4s; }
+
+/* Enhanced Glass Metric Cards Hover Engine */
+.glass-metric-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Magical Glow & Scaling Lift on Hover */
+.glass-metric-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: #ffffff;
+  border-color: rgba(79, 70, 229, 0.3) !important;
+  box-shadow: 0 30px 60px -15px rgba(79, 70, 229, 0.15);
+}
+
+/* Dynamic Hover Interaction for Icons Inside Metric Cards */
+.glass-metric-card:hover .metric-icon-box {
+  transform: scale(1.15) rotate(8deg);
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+.metric-icon-box {
+  height: 54px;
+  width: 54px;
+  background: #f8fafc;
+  border-radius: 14px;
+  margin: 0 auto;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Value Proposition Feature Blocks Animations */
+.feature-micro-node {
+  padding: 1.5rem 1.25rem;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-micro-node:hover {
+  background: #ffffff;
+  border-color: rgba(226, 232, 240, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.06);
+}
+
+.feature-micro-node:hover .feature-icon-wrapper {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.1);
+}
+
+.feature-icon-wrapper {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  transition: all 0.3s ease;
+}
+/* Infinite Marquee Container Trackers */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 1rem 0;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* Left Moving Line Animation */
+@keyframes marqueeLeftDirection {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Right Moving Line Animation */
+@keyframes marqueeRightDirection {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-track-left {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: marqueeLeftDirection 30s linear infinite;
+}
+
+.marquee-track-right {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: marqueeRightDirection 30s linear infinite;
+}
+
+/* Pause the animation on hover for a premium user experience */
+.marquee-wrapper:hover .marquee-track-left,
+.marquee-wrapper:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+/* Lock sizing for cards inside the scrolling line */
+.marquee-item-card {
+  width: 300px;
+  flex-shrink: 0;
+}
